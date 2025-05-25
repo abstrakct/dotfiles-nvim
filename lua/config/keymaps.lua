@@ -106,3 +106,5 @@ local crates = require("crates")
 vim.keymap.set("n", "<leader>rv", crates.show_versions_popup, { desc = "Show crate versions", silent = true })
 vim.keymap.set("n", "<leader>rf", crates.show_features_popup, { desc = "Show crate features", silent = true })
 vim.keymap.set("n", "<leader>rd", crates.show_dependencies_popup, { desc = "Show crate dependencies", silent = true })
+
+map("n", "<leader>qm", "<cmd>QMKFormat<cr>", { desc = "QMK Format" })
