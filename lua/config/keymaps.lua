@@ -25,8 +25,8 @@ map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Diagnost
 map("n", "ø", ":", nil)
 map("i", "jj", "<esc>", nil)
 
-map("n", "gt", "<cmd>tabnext<cr>", { desc = "Next Tab" })
-map("n", "gr", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
+-- map("n", "gt", "<cmd>tabnext<cr>", { desc = "Next Tab" })
+-- map("n", "gr", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
 -- map("n", "<tab>", "<cmd>tabnext<cr>", { desc = "Next Tab" })
 -- map("n", "<s-tab>", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
 
@@ -46,7 +46,7 @@ vim.keymap.set("x", "<C-_>", function()
 end)
 
 -- Normal mode: change current word with enter
-map("n", "<cr>", "ciw")
+-- map("n", "<cr>", "ciw")
 
 -- Keep cursor position after yanking
 map("v", "y", "ygv<esc>")
@@ -86,7 +86,7 @@ map("n", "<tab>", ":BufferLineCycleNext<CR>", opts)
 map("n", "<S-tab>", ":BufferLineCyclePrev<CR>", opts)
 
 -- Leader
-map("n", "<leader>e", "<cmd>Neotree focus<cr>", { desc = "Focus File Explorer" })
+-- map("n", "<leader>e", "<cmd>Neotree focus<cr>", { desc = "Focus File Explorer" })
 map("n", "<leader>ll", "<cmd>nohlsearch<cr>", { desc = "Turn off search highlighting" })
 map("n", "<leader>lg", function()
   Snacks.lazygit({ cwd = LazyVim.root.git() })
