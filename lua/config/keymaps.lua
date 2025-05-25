@@ -15,6 +15,7 @@ unmap("n", "<leader>xT")
 unmap("n", "<leader>xx")
 unmap("n", "<leader>xX")
 unmap("n", "<leader>l")
+unmap("n", "<leader>n")
 
 -- Keymaps for "Trouble"
 map("n", "<leader>xl", "<cmd>Trouble loclist toggle<cr>", { desc = "Location List" })
@@ -24,6 +25,10 @@ map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Diagnost
 -- Custom keymaps
 map("n", "ø", ":", nil)
 map("i", "jj", "<esc>", nil)
+
+map("n", "<leader>N", function()
+  Snacks.picker.notifications()
+end, { desc = "Notification History" })
 
 -- map("n", "gt", "<cmd>tabnext<cr>", { desc = "Next Tab" })
 -- map("n", "gr", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
@@ -62,8 +67,6 @@ map("n", "X", '"_x', opts)
 
 map("n", "n", "nzzzv", opts)
 map("n", "N", "Nzzzv", opts)
-
-map("n", "<leader>o", ":bd<CR>", { desc = "Delete buffer" })
 
 -- Stay in visual mode while indenting
 map("v", ">", ">gv", opts)
@@ -108,3 +111,10 @@ vim.keymap.set("n", "<leader>rf", crates.show_features_popup, { desc = "Show cra
 vim.keymap.set("n", "<leader>rd", crates.show_dependencies_popup, { desc = "Show crate dependencies", silent = true })
 
 map("n", "<leader>qm", "<cmd>QMKFormat<cr>", { desc = "QMK Format" })
+
+-- Obsidian
+map("n", "<leader>oc", ":cd /home/rolf/dox/obsidian/brain2<cr>")
+map("n", "<leader>oo", function()
+  Snacks.picker.files({ cwd = "/home/rolf/dox/obsidian/brain2" })
+end, { desc = "Notes" })
+map("n", "<leader>on", ":ObsidianTemplate note<cr>")
