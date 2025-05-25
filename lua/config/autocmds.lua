@@ -11,3 +11,11 @@ vim.cmd([[autocmd! CursorHold * lua vim.diagnostic.config({ virtual_lines = { on
 -- vim.cmd([[autocmd! CursorHold * lua vim.diagnostic.open_float()]])
 -- vim.cmd([[autocmd! VimEnter * Neotree show]])
 -- vim.cmd([[autocmd! VimLeavePre * Neotree close]])
+
+-- Disable diagnostics for Lua files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "lua",
+  callback = function()
+    vim.diagnostic.disable(0)
+  end,
+})
