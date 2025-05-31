@@ -21,7 +21,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 local function augroup(name)
-  return vim.api.nvim_create_augroup("lazyvim_" .. name, { clear = true })
+  return vim.api.nvim_create_augroup("lazyvim_" .. name, { clear = false })
 end
 
 -- vim.api.nvim_del_augroup_by_name("wrap_spell")
